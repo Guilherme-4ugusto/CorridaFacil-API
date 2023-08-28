@@ -14,7 +14,7 @@ const fileTransport = pino.transport({
         // Use target: 'pino/file' to write to stdout
         // without any change.
         target: 'pino/file',
-        options: { destination: `${logsPath}/log_${dateNowFormat}.txt` }
+        options: { destination: `${logsPath}/log_${dateNowFormat}.log` }
       }]
   
 });

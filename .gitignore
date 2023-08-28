@@ -2,6 +2,5 @@ node_modules
 # Keep environment variables out of version control
 .env
 *.sql
-logs/
-!logs/tsup_keep_folder.txt
+*.log
 dist
