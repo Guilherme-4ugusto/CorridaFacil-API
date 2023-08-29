@@ -3,6 +3,7 @@ const  Logger  = require('../utils/logger')
 import { unlink } from 'node:fs';
 const { parse, differenceInDays  } = require("date-fns");
 const path = require('path');
+require('dotenv').config()
 
 
 export class Util {

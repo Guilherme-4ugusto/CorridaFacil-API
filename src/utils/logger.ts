@@ -1,11 +1,12 @@
 const pino = require("pino");
 const { format } = require("date-fns");
+require('dotenv').config()
 
 const dateNow = new Date();
 const dateFormat = 'yyyy_MM_dd';
 const dateNowFormat = format(dateNow, dateFormat);
 const path = require('path');
-const logsPath = path.resolve(__dirname, "../logs");
+const logsPath = path.resolve(__dirname, process.env.IS_DEV == "TRUE" ? "../logs" : "./logs");
 
 const fileTransport = pino.transport({
     pipeline: [{
